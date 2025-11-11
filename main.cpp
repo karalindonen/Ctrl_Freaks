@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : lab5.cpp
-// Author      :
+// Author      : Kara Lindonen, Maya Harner, and Christina McA'Nulty
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
@@ -8,13 +8,17 @@
 
 #include <iostream>
 #include <ctime>
+#include "Asort.cc"
 #include "myheaders.h"
 
 using namespace std;
 
 
 int main() {
+	//int arr[5] = {5, 2, 3, 8, 1, 12, -5};
 
+	//T a;
+	/*
 	int		choice, sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
 	double  begin_time, end_time, cpu_time_used;
@@ -119,6 +123,7 @@ int main() {
 		} // switch
 
 	} // while
+	*/
 
 	return 0;
 }
