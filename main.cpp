@@ -8,7 +8,6 @@
 
 #include <iostream>
 #include <ctime>
-#include "Asort.cc"
 #include "myheaders.h"
 
 using namespace std;
@@ -16,10 +15,9 @@ using namespace std;
 
 int main() {
 	long size = 7;
-	long arr[size] = {5, 2, 3, 8, 1, 12, -5};
+	long arr[] = {5, 2, 3, 8, 1, 12, -5};
 
-	insertion a;
-	a.insertionSort(arr,size);
+	insertionSort(arr,size);
 	printarray(arr,size);
 	/*
 	int		choice, sz;

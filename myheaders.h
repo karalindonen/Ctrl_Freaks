@@ -1,9 +1,3 @@
-/*
- * myheaders.h
- *
- *  Created on: Nov 11, 2025
- *      Author: kara-lindonen
- */
 
 #ifndef MYHEADERS_H_
 #define MYHEADERS_H_
@@ -21,6 +15,7 @@ void	printarray(long data[], long size);
 int		readfile(string infilename, long data[]);
 int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
+void	insertionSort(long data[], long n);
 
 
 

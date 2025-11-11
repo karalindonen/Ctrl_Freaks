@@ -1,9 +1,4 @@
-/*
- * helper_fns.cc
- *
- *  Created on: Nov 11, 2025
- *      Author: kara-lindonen
- */
+
 
 #include <iostream>
 #include <fstream>
