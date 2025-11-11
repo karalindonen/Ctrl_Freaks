@@ -15,9 +15,12 @@ using namespace std;
 
 
 int main() {
-	//int arr[5] = {5, 2, 3, 8, 1, 12, -5};
+	long size = 7;
+	long arr[size] = {5, 2, 3, 8, 1, 12, -5};
 
-	//T a;
+	insertion a;
+	a.insertionSort(arr,size);
+	printarray(arr,size);
 	/*
 	int		choice, sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
