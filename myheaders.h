@@ -16,7 +16,7 @@ int		readfile(string infilename, long data[]);
 int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 void	insertionSort(long data[], long n);
-
+void	copyArray(long data[], long wData[], long size);
 
 
 

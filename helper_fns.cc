@@ -34,4 +34,10 @@ void	printarray(long data[], long size){
 	cout << endl;
 }
 
+void	copyArray(long data[], long wData[], long size){
+	for(long i=0; i < size; i++){
+		wData[i] = data[i];
+	}
+}
+
 

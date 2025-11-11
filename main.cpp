@@ -51,13 +51,13 @@ int main() {
 			case 2: // Sort function A
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-
+					copyArray(data,wData,sz);
 
 					begin_time = clock();   // start cpu timer
 
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
-
+					insertionSort(wData,sz);
 
 
 					end_time = clock();		// end cpu timer
