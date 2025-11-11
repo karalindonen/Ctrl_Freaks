@@ -7,9 +7,15 @@
 
 #include "myheaders.h"
 
+template <typename T>
+class insertion{
+public:
+	void insertionSort(T data[], int n);
+};
+
 // Your ASort function(s) goes here ..
 template <class A>
-void inerstionSort(A data[], int n){
+void insertionSort(A data[], int n){
 	for(int i = 1, j; i < n; i++){
 		A tmp = data[i];
 		for(j = i; j > 0 && tmp < data[j-1]; j--){
