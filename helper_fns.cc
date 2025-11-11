@@ -27,5 +27,11 @@ void	printmenu() {
 
 }
 
+void	printarray(long data[], long size){
+	for(long i=0; i < size; i++){
+		cout << data[i] << " ";
+	}
+	cout << endl;
+}
 
 
