@@ -15,7 +15,7 @@ using namespace std;
 
 int main() {
 	long size = 7;
-	long arr[] = {5, 2, 3, 8, 1, 12, -5};
+	long arr[] = {5, 2, 4, 8, 1, 12, -5};
 
 	insertionSort(arr,size);
 	printarray(arr,size);
