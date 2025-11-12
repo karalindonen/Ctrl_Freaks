@@ -16,10 +16,12 @@ using namespace std;
 int main() {
 	long size = 7;
 	long arr[] = {5, 2, 4, 8, 1, 12, -5};
+	long b[size];
 
 	//insertionSort(arr,size);
 	//combSort(arr,size);
-	printarray(arr,size);
+	readfile("lab5input_test.txt",b,8);
+	printarray(b,8);
 	/*
 	int		choice, sz;
 	long	data[MAXSIZE], wData[MAXSIZE];

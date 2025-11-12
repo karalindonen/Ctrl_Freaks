@@ -27,6 +27,7 @@ void	printmenu() {
 
 }
 
+//print all the elements of the array
 void	printarray(long data[], long size){
 	for(long i=0; i < size; i++){
 		cout << data[i] << " ";
@@ -34,17 +35,36 @@ void	printarray(long data[], long size){
 	cout << endl;
 }
 
+//copy an array to another array
 void	copyArray(long data[], long wData[], long size){
 	for(long i=0; i < size; i++){
 		wData[i] = data[i];
 	}
 }
 
+//swaps two elements in the array
 void	swap(long& x, long& y){
 	long temp1 = x;
 	long temp2 = y;
 	x = temp2;
 	y = temp1;
+}
+
+// reads the text file
+int		readfile(string infilename, long data[]){
+	//create stream object for reading file
+	ifstream infile;
+
+	//open input file for reading
+	infile.open(infilename);
+
+	//need to enter code here to read the file properly
+
+	//close file
+	infile.close();
+
+	//return the size of the array
+	return 1;
 }
 
 
