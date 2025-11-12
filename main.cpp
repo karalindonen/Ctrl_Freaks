@@ -1,9 +1,7 @@
 //============================================================================
-// Name        : lab5.cpp
-// Author      : Kara Lindonen, Maya Harner, and Christina McA'Nulty
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Kara Lindonen, Maya Harner, and Christina McA'Nulty
+// Lab 5, ECE_2161-002
+// Description: 6 sort algorithms
 //============================================================================
 
 #include <iostream>
@@ -16,11 +14,11 @@ using namespace std;
 int main() {
 	long size = 7;
 	long arr[] = {5, 2, 4, 8, 1, 12, -5};
-	long b[size];
+	long b[8];
 
 	//insertionSort(arr,size);
 	//combSort(arr,size);
-	readfile("lab5input_test.txt",b,8);
+	readfile("lab5input_test.txt",b);
 	printarray(b,8);
 	/*
 	int		choice, sz;

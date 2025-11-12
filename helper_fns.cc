@@ -54,11 +54,19 @@ void	swap(long& x, long& y){
 int		readfile(string infilename, long data[]){
 	//create stream object for reading file
 	ifstream infile;
+	//create variable for while condition and index
+	long d;
+	long i = 0;
+
 
 	//open input file for reading
 	infile.open(infilename);
 
-	//need to enter code here to read the file properly
+	//need to enter code here to read the file properly(this is not working rn)
+	while (infile >> d){
+		infile >> data[i];
+		i++;
+	}
 
 	//close file
 	infile.close();
