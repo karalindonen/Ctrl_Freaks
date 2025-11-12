@@ -17,6 +17,7 @@ int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 void	insertionSort(long data[], long n);
 void	copyArray(long data[], long wData[], long size);
+void	combSort(long data[], const long n);
 
 
 

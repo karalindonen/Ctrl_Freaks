@@ -40,4 +40,11 @@ void	copyArray(long data[], long wData[], long size){
 	}
 }
 
+void	swap(long& x, long& y){
+	long temp1 = x;
+	long temp2 = y;
+	x = temp2;
+	y = temp1;
+}
+
 
