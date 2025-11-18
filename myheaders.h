@@ -20,6 +20,7 @@ void	copyArray(long data[], long wData[], long size);
 void	combSort(long data[], const long n);
 void	merge(long data[], long first, long last);
 void	mergeSort(long data[], long first, long last);
+void	bubbleSort(long data[], long n);
 
 
 

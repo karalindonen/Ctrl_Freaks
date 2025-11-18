@@ -21,7 +21,9 @@ int main() {
 	//readfile("lab5input_test.txt",b);
 	//printarray(b,8);
 	//writefile(b,8,"lab5_output.txt");
-	mergeSort(arr,0,size-1);
+	//mergeSort(arr,0,size-1);
+	//printarray(arr,size);
+	bubbleSort(arr,size);
 	printarray(arr,size);
 	/*
 	int		choice, sz;
@@ -126,7 +128,7 @@ int main() {
 
 					// Call your Sort function B here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
-
+					bubbleSort(wData,sz);
 
 
 					end_time = clock();		// end cpu timer

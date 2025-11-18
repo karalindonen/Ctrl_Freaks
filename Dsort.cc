@@ -1,5 +1,4 @@
 #include "myheaders.h"
-#include <iostream>
 
 //function to merge temporary arrays in the sorting process
 void merge(long data[], long first, long last){
@@ -39,9 +38,7 @@ void merge(long data[], long first, long last){
 	//load to data the contents of temp
 	for (long i=0; i<size; i++){
 		data[first + i] = temp[i];
-		cout << temp[i] << " ";
 	}
-	cout << endl;
 
 	//delete the temp array to free up space in memory
 	delete[] temp;
