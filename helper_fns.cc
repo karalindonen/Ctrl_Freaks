@@ -62,9 +62,9 @@ int		readfile(string infilename, long data[]){
 	//open input file for reading
 	infile.open(infilename);
 
-	//need to enter code here to read the file properly(this is not working rn)
+	//while there is another element to read from the file, add the element to the array and increment size
 	while (infile >> d){
-		infile >> data[i];
+		data[i] = d;
 		i++;
 	}
 
@@ -72,6 +72,26 @@ int		readfile(string infilename, long data[]){
 	infile.close();
 
 	//return the size of the array
+	return i;
+}
+
+//writes to an output file
+int		writefile(long data[], long size, string outfilename){
+	//create stream object for writing file
+	ofstream outfile;
+
+	//open output file for writing
+	outfile.open(outfilename);
+
+	//for loop to write the elements of the data array to the output file
+	for (long i=0; i < size; i++){
+		outfile << data[i] << " ";
+	}
+
+	//close file
+	outfile.close();
+
+	//return 1?
 	return 1;
 }
 

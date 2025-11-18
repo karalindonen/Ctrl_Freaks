@@ -20,6 +20,7 @@ int main() {
 	//combSort(arr,size);
 	readfile("lab5input_test.txt",b);
 	printarray(b,8);
+	writefile(b,8,"lab5_output.txt");
 	/*
 	int		choice, sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
