@@ -14,15 +14,10 @@ using namespace std;
 int main() {
 	long size = 7;
 	long arr[] = {5, 2, 4, 8, 1, 12, -5};
-	long b[8];
 
 	//insertionSort(arr,size);
 	//combSort(arr,size);
-	//readfile("lab5input_test.txt",b);
-	//printarray(b,8);
-	//writefile(b,8,"lab5_output.txt");
 	//mergeSort(arr,0,size-1);
-	//printarray(arr,size);
 	countingSort(arr,size);
 	printarray(arr,size);
 	/*
