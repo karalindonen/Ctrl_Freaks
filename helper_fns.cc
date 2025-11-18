@@ -28,11 +28,14 @@ void	printmenu() {
 }
 
 //print all the elements of the array
-void	printarray(long data[], long size){
-	for(long i=0; i < size; i++){
-		cout << data[i] << " ";
-	}
-	cout << endl;
+void	printarray(long data[], long size) {
+
+			cout << endl << "Array contents:" << endl;
+			for (int i = 0; i < size; ++i)	  cout << data[i] << " ";
+			cout << endl;
+
+		return;
+
 }
 
 //copy an array to another array
@@ -42,57 +45,74 @@ void	copyArray(long data[], long wData[], long size){
 	}
 }
 
-//swaps two elements in the array
-void	swap(long& x, long& y){
-	long temp1 = x;
-	long temp2 = y;
-	x = temp2;
-	y = temp1;
+// Swaps two numbers. Numbers *must* be passed by reference, else we end up
+// swapping only copies of data, not the originals.
+
+void	swap(long& x, long& y) {
+
+			long	tmp;
+
+			tmp = x;
+			x = y;
+			y = tmp;
+
+			return;
 }
 
-// reads the text file
-int		readfile(string infilename, long data[]){
-	//create stream object for reading file
-	ifstream infile;
-	//create variable for while condition and index
-	long d;
-	long i = 0;
+// Read input file and store numbers in arrays d1 and d2
+// Function returns no. of data items, if file is read successfully. Else,
+// function returns -1.
 
+int		readfile(string infilename, long d[]) {
 
-	//open input file for reading
-	infile.open(infilename);
+			long		i, size;
+			ifstream	infile;
 
-	//while there is another element to read from the file, add the element to the array and increment size
-	while (infile >> d){
-		data[i] = d;
-		i++;
-	}
+			// IMP NOTE: In the C++ std before C++11, the constructor for an
+			//           ifstream or ofstream object takes a const char*, not
+			//           a string. In compilers that follow the C++11 std or
+			//			 later, we may write instead: infile.open(infilename);
 
-	//close file
-	infile.close();
+			infile.open(infilename.c_str());
 
-	//return the size of the array
-	return i;
+			if (!infile.is_open()) { size = -1;}
+			else {
+				for (i = 0; (!infile.eof()) && (i < MAXSIZE); ++i) {
+					infile >> d[i];
+				} // for
+
+				size = i-1; // eof() causes an extra (invalid) number to be read
+				infile.close();
+			} // else
+
+			return size;
 }
 
-//writes to an output file
-int		writefile(long data[], long size, string outfilename){
-	//create stream object for writing file
-	ofstream outfile;
 
-	//open output file for writing
-	outfile.open(outfilename);
+// Write output file to disk from array data[]
+// If file is successfully written to disk, function returns 0. Else,
+// function returns -1.
 
-	//for loop to write the elements of the data array to the output file
-	for (long i=0; i < size; i++){
-		outfile << data[i] << " ";
-	}
+int		writefile(long data[], long size, string outfilename) {
 
-	//close file
-	outfile.close();
+			long		i, errcode;
+			ofstream	outfile;
 
-	//return 1?
-	return 1;
+			// IMP NOTE: In the C++ std before C++11, the constructor for an
+			//           ifstream or ofstream object takes a const char*, not
+			//           a string. In compilers that follow the C++11 std or
+			//			 later, we may write instead: outfile.open(outfilename);
+			outfile.open(outfilename.c_str());
+
+			if (!outfile.is_open()) { errcode = -1;}
+			else {
+				for (i = 0; i < size; ++i)	  outfile << data[i] << " ";
+
+				errcode = 0;
+				outfile.close();
+			} // else
+
+			return errcode;
 }
 
 
