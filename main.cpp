@@ -23,7 +23,7 @@ int main() {
 	//writefile(b,8,"lab5_output.txt");
 	//mergeSort(arr,0,size-1);
 	//printarray(arr,size);
-	bubbleSort(arr,size);
+	countingSort(arr,size);
 	printarray(arr,size);
 	/*
 	int		choice, sz;

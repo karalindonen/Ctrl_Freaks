@@ -1,6 +1,6 @@
 #include "myheaders.h"
 //esort function
-void countingSort(long data[], const long n){
+void countingSort(long data[], long n){
 	long i;
 	long largest = data[0];
 	long *tmp = new long[n];
