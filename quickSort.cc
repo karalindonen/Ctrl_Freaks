@@ -1,40 +1,48 @@
 #include "myheaders.h"
-//esort function
-void countingSort(long data[], long n){
-	long i;
-	long largest = data[0];
-	long *tmp = new long[n];
-	for(int i = 1; i < n; i++){
-		if(largest < data[i]){
-			largest = data[i];
+
+// Fsort - Quicksort
+// function that sorts through a process of partitioning and dividing into subarrays
+void quickSort(long data[], long first, long last){
+
+	// create variables for bounds
+	int lower = first + 1;
+	int upper = last;
+
+	// exchanging first element with middle element of data
+	swap(data[first], data[(first + last)/2]);
+
+	// choose a bound
+	int bound = data[first];
+	//
+	while (lower <= upper){
+		while (bound > data[lower]){
+			// move the lower bound up
+			lower++;
+		}
+		while (bound < data[upper]){
+			// move the upper bound down/decrement
+			upper--;
+		}
+		// as long as the lower bound is less than the upper bound
+		if (lower < upper){
+
+			// exchange/swap the elements
+			swap(data[lower++], data[upper--]);
+
+		} else{
+			lower++;
 		}
 	}
-	unsigned long *count = new unsigned long[largest + 1];
 
-	for(i = 0; i <= largest; i++){
-		count[i] = 0;
+	// exchange upper bound element and first element
+	swap(data[upper], data[first]);
+	// if the first element is less than one less than the upper bound then
+	if (first < upper-1){
+		quickSort(data, first, upper-1);
 	}
-
-	for(i = 0; i < n; i++){
-		count[data[i]]++;
+	if (upper+1 < last){
+		quickSort(data, upper+1, last);
 	}
-
-	for(i = 1; i <= largest; i++){
-		count[i] = count[i-1] = count[i];
-	}
-
-	for(i = n - 1; i >= 0; i--){
-			tmp[count[data[i]]-1] = data[i];
-			count[data[i]]--;
-	}
-
-	for(i = 0; i <= n; i++){
-			data[i] = tmp[i];
-	}
-
-
-
 
 }
-
 
