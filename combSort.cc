@@ -1,6 +1,6 @@
 #include "myheaders.h"
 
-//Bsort function
+//Bsort function combSort
 void combSort(long data[], const long n){
 	//create the variables for step and the two indices
 	long step = n, j, k;
