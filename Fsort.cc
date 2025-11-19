@@ -8,6 +8,7 @@ void quickSort(long data[], long first, long last){
 	int lower = first + 1;
 	int upper = last;
 
+	// exchanging first element with middle element of data
 	swap(data[first], data[(first + last)/2]);
 
 	// choose a bound
@@ -32,7 +33,10 @@ void quickSort(long data[], long first, long last){
 			lower++;
 		}
 	}
+
+	// exchange upper bound element and first element
 	swap(data[upper], data[first]);
+	// if the first element is less than one less than the upper bound then
 	if (first < upper-1){
 		quickSort(data, first, upper-1);
 	}
