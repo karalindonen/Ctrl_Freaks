@@ -12,12 +12,6 @@ using namespace std;
 
 
 int main() {
-	long size = 7;
-	long arr[size] = {-5, 6, 4, 100, -4, 2, 1};
-
-	countingSort(arr,size);
-	printarray(arr,size);
-	/*
 	int		choice, sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
 	double  begin_time, end_time, cpu_time_used;
@@ -244,7 +238,6 @@ int main() {
 		} // switch
 
 	} // while
-	*/
 
 	return 0;
 }
