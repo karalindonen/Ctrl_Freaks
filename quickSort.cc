@@ -20,7 +20,7 @@ void quickSort(long data[], long first, long last){
 			lower++;
 		}
 		while (bound < data[upper]){
-			// move the upper bound down
+			// move the upper bound down/decrement
 			upper--;
 		}
 		// as long as the lower bound is less than the upper bound
