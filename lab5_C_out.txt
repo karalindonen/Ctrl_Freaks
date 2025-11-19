@@ -1,3 +1,0 @@
-lab5_C_out.txt
- Created on: Nov 18, 2025
-     Author: kara-lindonen
