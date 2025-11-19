@@ -12,15 +12,7 @@ using namespace std;
 
 
 int main() {
-	long size = 7;
-	long arr[] = {5, 2, 4, 8, 1, 12, -5};
 
-	//insertionSort(arr,size);
-	//combSort(arr,size);
-	//mergeSort(arr,0,size-1);
-	countingSort(arr,size);
-	printarray(arr,size);
-	/*
 	int		choice, sz;
 	long	data[MAXSIZE], wData[MAXSIZE];
 	double  begin_time, end_time, cpu_time_used;
@@ -172,7 +164,8 @@ int main() {
 					else cout << endl << "Output written to " << ofilename << endl;
 
 					break;
-			case 5: // Counting Sort
+			/*
+			case 6: // Counting Sort
 
 			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					copyArray(data,wData,sz);
@@ -203,7 +196,7 @@ int main() {
 					else cout << endl << "Output written to " << ofilename << endl;
 
 					break;
-			case 5: // Quick Sort
+			case 7: // Quick Sort
 
 			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					copyArray(data,wData,sz);
@@ -234,6 +227,7 @@ int main() {
 					else cout << endl << "Output written to " << ofilename << endl;
 
 					break;
+			*/
 			case 0: // Exit Program
 
 					cout << endl << "Received program exit command - I QUIT!" << endl << endl;
@@ -247,7 +241,6 @@ int main() {
 		} // switch
 
 	} // while
-	*/
 
 	return 0;
 }
