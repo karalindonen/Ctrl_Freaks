@@ -1,7 +1,8 @@
 //============================================================================
 // Kara Lindonen, Maya Harner, and Christina McA'Nulty
 // Lab 5, ECE_2161-002
-// Description: 6 sort algorithms
+// Description: 6 sorting algorithms for an input file of 2,000,00
+//              observing complexities and runtimes of the algorithms
 //============================================================================
 
 #include <iostream>
@@ -12,7 +13,7 @@ using namespace std;
 
 
 int main() {
-	int		choice, sz;
+	int		choice, sz, halfSz;
 	long	data[MAXSIZE], wData[MAXSIZE];
 	double  begin_time, end_time, cpu_time_used;
 	string  ifilename, ofilename;
@@ -28,15 +29,16 @@ int main() {
                     // The function 'readfile' returns the size of the file that was read
 					// If the file could not be read, 'readfile' returns -1
 
-					ifilename = "../lab5input_test.txt";
+					ifilename = "../lab5_input.txt";
 					sz = readfile(ifilename, data);
+					halfSz = sz/2;
 
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Input File Not Found or File cannot be opened." <<endl;
 						 cerr << "       Please check that the file exists, its path, and try again!" << endl << endl;
 						 return 0;
 					}
-					else cout << endl << "File size is: " << sz << endl;
+					else cout << endl << "Half of file size is: " << halfSz << endl;
 
 					break;
 
@@ -76,9 +78,6 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-
-					begin_time = clock();   // start cpu timer
-
 					// Call your comb sort here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
 					combSort(wData,sz);
@@ -108,13 +107,9 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-
-					begin_time = clock();   // start cpu timer
-
 					// Call your bubble sort here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
 					bubbleSort(wData,sz);
-
 
 					end_time = clock();		// end cpu timer
 
@@ -139,13 +134,9 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-
-					begin_time = clock();   // start cpu timer
-
 					// Call your merge sort here to sort the array 'wData'
 			        //  Note that 'wDdata' is of size 'sz' (see case 1).
 					mergeSort(wData,0,sz-1);
-
 
 					end_time = clock();		// end cpu timer
 
@@ -170,13 +161,9 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-
-					begin_time = clock();   // start cpu timer
-
 					// Call your counting sort here to sort the array 'wData'
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 					countingSort(wData,sz);
-
 
 					end_time = clock();		// end cpu timer
 
@@ -198,9 +185,6 @@ int main() {
 
 			        // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 					copyArray(data,wData,sz);
-
-					begin_time = clock();   // start cpu timer
-
 
 					begin_time = clock();   // start cpu timer
 
